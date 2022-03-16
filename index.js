@@ -12,5 +12,34 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map((phrase) => {
+    const words = phrase.split(" ");
+    const capPhrase = words.map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    const answer = capPhrase.join(" ");
+    return answer;
+  })
 }
+
+titleCased();
+
+
+// const titleCased = tutorials.map(()) => {
+//   let separateWord = tutorials.toLowerCase().split(' ');
+//   for (var i = 0; i < separateWord.length; i++) {
+//      separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+//      separateWord[i].substring(1);
+//   }
+//   return separateWord.join(' ');
+// }
+
+
+// function titleCased(tutorials) {
+//   let separateWord = tutorials.toLowerCase().split(' ');
+//   for (var i = 0; i < separateWord.length; i++) {
+//      separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+//      separateWord[i].substring(1);
+//   }
+//   return separateWord.join(' ');
+// }
